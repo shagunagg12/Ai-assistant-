@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(https://t4.ftcdn.net/jpg/05/62/74/25/360_F_562742563_PosEgK2rE0LCRcwGauTfYi8JmwYG26fu.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    padding: 40px;
+    position: absolute;
+    left: 50%;  
+    top: 50%;
+    transform: translateY(-50%);  /* Keep it vertically centered */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+    opacity: 0;  /* Start hidden */
+    animation: fadeInRight 1s ease-out forwards;  /* Add a smooth fade-in and right-position animation */
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(249, 249, 7);
+    font-size: 18px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+    background-color: #2f4430;
+    transform: scale(1.05);
+}
+
+.listening {
+    animation: pulse 1s infinite;
+    background-color: #FF6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) translateX(20%); /* Start 20% to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0); /* End at the desired position */
+    }
+}
+
+
+
+
+
+
+
+
+/* Styles for home. html page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Body Styling */
+  .home {
+    background: linear-gradient(to bottom right, #3c0202, #87262b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    
+    background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MDctMTA5Yi1rcnhsdzdraS5qcGc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+  
+  /* Welcome container */
+  .welcome-container {
+    background: rgba(255, 255, 255, 0.15);
+    bottom: 7%;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);  /* Blurring the background for a sleek effect */
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* AI tagline styling */
+  .tagline {
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Subheading text styling */
+  .subheading {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+  }
+  
+  /* Hover and Focused button effects */
+  .botn {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Gradient button */
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .botn:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 15px 50px rgba(255, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+  
+  /* Button focus state */
+  .botn:focus {
+    outline: none;
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Animation for fading in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Adding some background effects */
+  .home::before {
+    content: "";
+    background: url('https://source.unsplash.com/1600x900/?ai,technology,abstract') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: -1;
+  }
+  
