@@ -5,20 +5,89 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AI Assistant</title>
         <link rel="stylesheet" href="styles.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
+        <div id="particles-js"></div>
+        <div class="animated-bg"></div>
         
-        <div class="container">
-
-            <h1>Your AI Assistant</h1>
-            <p>Press the button and say a command (e.g., "Open YouTube")</p>
-            <button id="listen-btn" class="btn">🎙️ Start
-                Listening</button>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        
+        <div class="help-toggle">
+            <i class="fas fa-question"></i>
         </div>
 
-        <script src="./scripts.js">
+       
         
-    </script>
+        <div class="container">
+            <h1>Your AI Assistant</h1>
+            <p>Press the button and say a command</p>
+            
+            <div class="voice-wave">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+
+            <button id="listen-btn" class="btn">
+                <i class="fas fa-microphone"></i>
+                Start Listening
+            </button>
+
+            <div class="text-input">
+                <input type="text" id="text-command" placeholder="Or type your command here...">
+                <button id="send-text" class="btn-small">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item" data-command="weather">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span>Weather</span>
+                </div>
+                <div class="feature-item" data-command="time">
+                    <i class="fas fa-clock"></i>
+                    <span>Time</span>
+                </div>
+                <div class="feature-item" data-command="calculator">
+                    <i class="fas fa-calculator"></i>
+                    <span>Calculator</span>
+                </div>
+                <div class="feature-item" data-command="calendar">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendar</span>
+                </div>
+            </div>
+
+            <div class="command-history">
+                <h3>Recent Commands</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+
+        <div class="help-menu">
+            <button class="help-toggle">
+                <i class="fas fa-question-circle"></i>
+            </button>
+            <div class="help-content">
+                <h3>Available Commands</h3>
+                <ul>
+                    <li>"Open [website]" - Opens popular websites</li>
+                    <li>"Weather in [city]" - Shows weather</li>
+                    <li>"What time is it" - Shows current time</li>
+                    <li>"Set timer [minutes]" - Sets a timer</li>
+                    <li>"Tell me a joke" - Random joke</li>
+                    <li>"Open calendar" - Opens calendar</li>
+                    <li>"Calculate [expression]" - Basic calculations</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="./scripts.js"></script>
     </body>
 </html>
