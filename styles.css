@@ -522,44 +522,120 @@ body {
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 25px;
-        width: 90%;
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
     }
-    
+
     body {
+        background-attachment: scroll;
         background-position: center;
     }
-    
-    .btn {
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .feature-item {
+        padding: 12px;
+    }
+
+    .feature-item i {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .theme-toggle, .help-toggle {
+        padding: 8px;
+        top: 10px;
+    }
+
+    .theme-toggle {
+        right: 10px;
+    }
+
+    .help-toggle {
+        left: 10px;
+    }
+
+    .help-content {
+        max-width: 85%;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #text-command {
         width: 100%;
-        justify-content: center;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .command-history {
+        max-height: 150px;
+    }
+
+    #history-list {
+        font-size: 13px;
     }
 }
 
-/* Enhanced animations */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+/* Small phone styles */
+@media screen and (max-width: 380px) {
+    .container {
+        width: 98%;
+        padding: 15px;
     }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(255, 99, 71, 0.6);
+
+    .feature-item {
+        padding: 10px;
     }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .theme-toggle, .help-toggle {
+        padding: 6px;
+    }
+
+    .theme-toggle i, .help-toggle i {
+        font-size: 16px;
     }
 }
 
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) translateX(30px);
+/* Landscape orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        margin: 5px auto;
+        padding: 15px;
     }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) translateX(0);
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .command-history {
+        max-height: 100px;
     }
 }
 
